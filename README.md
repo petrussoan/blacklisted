@@ -1,13 +1,6 @@
-local blacklisted = {
-	2330443164
-}
-
-local blacklistReason = "Blacklisted."
-
-game.Players.PlayerAdded:Connect(function(player)
-	for i,v in pairs(blacklisted) do
-		if v == player.UserId then
-			player:Kick(blacklistReason)
-		end
-	end
-end)
+if game.Players.LocalPlayer.UserId == 1328242763 then
+print("Access Enabled")
+else
+game.Players.LocalPlayer:Kick("Denied (Don't try to leak this)")
+print("Denied")
+end
